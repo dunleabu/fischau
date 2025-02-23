@@ -1,5 +1,5 @@
 # fischau
-Finite-scheme-automata
+**Finite-scheme-automata**
 
 A mash-up of Clojure's thread first macro and a finite state machine.
 
@@ -60,7 +60,7 @@ A simple (and probably inefficient) lexer that can tokenize simple mathematical
 expressions.
 
 ```
-./lex.csm "1+2" "a + (c / (5 * 2))"
+./lex.scm "1+2" "a + (c / (5 * 2))"
 ```
 ## Notes
 
