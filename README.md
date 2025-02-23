@@ -62,6 +62,13 @@ expressions.
 ```
 ./lex.scm "1+2" "a + (c / (5 * 2))"
 ```
+
+An example push-down automaton checking for balanced brackets in strings
+
+```
+./push-down.scm "aa" "a(a" "a)a" "a(a)a"
+```
+
 ## Notes
 
 Strictly there is no need for separate acceptance and action functions.
