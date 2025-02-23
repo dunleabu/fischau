@@ -22,7 +22,8 @@ The syntax to define the graph is
   (a -> b) ; edge from 'a to 'b
   (b -> c where f1)
   (b -> d where f2 then g1 g2)
-  (d -> a then g3))
+  (b -> e where (f3 2) then g3) ; f3 called with extra parameter
+  (d -> a then (g4 4 5)) ; g4 called with two extra parameters
 ```
 
 One steps through the graph by providing a starting node
@@ -36,9 +37,15 @@ If there are no action functions then the final state is the
 state returned by the acceptance function.
 This new state can then be checked against the edges for
 the new node and we recursively traverse the graph.
+Do this using `step-graph-recur` or (to see each transtion
+printed to screen) `step-graph-verbose`.
 
 If there are no suitable edges defined for a given node
 then we return with the node being `#f` and most recent state.
+
+Note that if there is a list in a function position in the
+graph definition such as `(f3 2)` then this is used in a
+thread-first way and called as `(f3 state 2)`.
 
 ## Examples
 
