@@ -146,7 +146,7 @@
     (newline)))
 
 
-(define (main args) ;(do-lex! "aa + 56"))
+(define (main args)
   (newline)
   (map do-lex! (cdr args)))
 
