@@ -111,7 +111,7 @@
          (new-state (cadr res)))
     (if new-node
         (step-graph-recur graph new-node new-state)
-        (list new-node new-state))))
+        (list node new-state))))
 
 (define (step-graph-verbose graph node state)
   (let* ((res (step-graph graph node state))
