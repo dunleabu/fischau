@@ -128,7 +128,7 @@
     (newline)
     (if new-node
         (step-graph-verbose graph new-node new-state)
-        (list new-node new-state))))
+        (list node new-state))))
 
 ;;; test code
 
